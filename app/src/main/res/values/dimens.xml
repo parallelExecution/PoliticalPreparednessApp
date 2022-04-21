@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="header_textSize">24sp</dimen>
+    <dimen name="marginStart">8dp</dimen>
+    <dimen name="marginTop">8dp</dimen>
+    <dimen name="marginEnd">8dp</dimen>
+    <dimen name="marginBottom">8dp</dimen>
+    <dimen name="marginStartBig">16dp</dimen>
+    <dimen name="marginEndBig">16dp</dimen>
+    <dimen name="marginBottomBig">16dp</dimen>
+    <dimen name="marginTopBig">16dp</dimen>
+
+</resources>

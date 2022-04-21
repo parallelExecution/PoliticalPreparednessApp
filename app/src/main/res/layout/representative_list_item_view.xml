@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="representative"
+            type="com.example.android.politicalpreparedness.representative.model.Representative" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/officialPhoto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:profileImage="@{representative.official.photoUrl}"
+            tools:srcCompat="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/officeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:lines="1"
+            android:text="@{representative.office.name}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/officialPhoto"
+            app:layout_constraintTop_toTopOf="@+id/officialPhoto"
+            tools:text="President of the United States" />
+
+        <TextView
+            android:id="@+id/officialName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{representative.official.name}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/officialParty"
+            app:layout_constraintStart_toStartOf="@+id/officeName"
+            app:layout_constraintTop_toBottomOf="@+id/officeName"
+            tools:text="Donald J. Trump" />
+
+        <TextView
+            android:id="@+id/officialParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{representative.official.party}"
+            app:layout_constraintBottom_toBottomOf="@+id/officialPhoto"
+            app:layout_constraintStart_toStartOf="@+id/officialName"
+            tools:text="Republican Party" />
+
+        <ImageView
+            android:id="@+id/wwwIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/officialPhoto"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            android:src="@drawable/ic_www" />
+
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wwwIcon"
+            app:layout_constraintStart_toEndOf="@+id/wwwIcon"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageView
+            android:id="@+id/twitterIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/facebookIcon"
+            app:layout_constraintStart_toEndOf="@+id/facebookIcon"
+            android:src="@drawable/ic_twitter" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.68" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
